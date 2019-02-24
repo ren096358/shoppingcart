@@ -4,7 +4,6 @@ require 'vendor/autoload.php';
 use App\ShoppingCart;
 
 $cart = new ShoppingCart();
-$cart->destroy();
 
 $productA = [
     'id' => '1',
@@ -25,3 +24,5 @@ $cart->insert($productB);
 
 echo '總數量：' . $cart->totalAmount() . '<br>';
 echo '總價錢：' . $cart->totalPrice();
+
+$cart->destroy();
